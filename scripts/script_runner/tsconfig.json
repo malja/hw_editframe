@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "esnext",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "outDir": "../../dist/scripts/script_runner"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": ["runner.ts"]
+}

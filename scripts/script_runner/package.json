@@ -1,0 +1,10 @@
+{
+  "name": "@ef/script_runner",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@ef/video_composer": "workspace:^"
+  }
+}

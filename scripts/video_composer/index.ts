@@ -1,0 +1,5 @@
+export * from './src/simple-video-compose'
+export * from './src/types/position.interface'
+export * from './src/types/composition-result.interface'
+export * from './src/types/simple-video-composer-options.interface'
+export * from './src/types/text-layer-options.interface'

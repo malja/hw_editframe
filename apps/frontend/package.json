@@ -1,0 +1,21 @@
+{
+  "name": "@ef/frontend",
+  "private": true,
+  "scripts": {
+    "build": "nuxi build",
+    "dev": "nuxi dev",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview",
+    "postinstall": "nuxi prepare"
+  },
+  "dependencies": {
+    "@ef/video_composer": "workspace:^",
+    "@mdi/font": "^7.1.96",
+    "dayjs": "^1.11.7",
+    "sass": "^1.58.0",
+    "vuetify": "next"
+  },
+  "devDependencies": {
+    "nuxt": "^3.1.1"
+  }
+}

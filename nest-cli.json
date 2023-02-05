@@ -1,0 +1,21 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/backend_node/src",
+  "monorepo": true,
+  "root": "apps/backend_node",
+  "compilerOptions": {
+  "webpack": true,
+    "tsConfigPath": "apps/backend_node/tsconfig.json"
+  },
+  "projects": {
+    "backend_node": {
+      "type": "application",
+        "root": "apps/backend_node",
+        "entryFile": "server",
+        "sourceRoot": "apps/backend_node/src",
+        "compilerOptions": {
+        "tsConfigPath": "apps/backend_node/tsconfig.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "@ef/video_composer",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "tsc"
+  }
+}
