@@ -1,22 +1,23 @@
-import {
-  SimpleVideoComposerOptions
-} from "./types/simple-video-composer-options.interface";
-import { Editframe } from '@editframe/editframe-js';
-import {CompositionResult} from "./types/composition-result.interface";
+import { SimpleVideoComposerOptions } from './types/simple-video-composer-options.interface'
+import { Editframe } from '@editframe/editframe-js'
+import { CompositionResult } from './types/composition-result.interface'
 
-export async function simpleVideoCompose(client: Editframe, options: SimpleVideoComposerOptions): Promise<CompositionResult> {
+export async function simpleVideoCompose(
+  client: Editframe,
+  options: SimpleVideoComposerOptions,
+): Promise<CompositionResult> {
   const defaults: SimpleVideoComposerOptions = {
-    audioUrl: "",
+    audioUrl: '',
     text: {
-      value: "Hello World!",
+      value: 'Hello World!',
       position: {
         x: 0,
-        y: 0
+        y: 0,
       },
       size: 15,
-      color: "#FF0000"
+      color: '#FF0000',
     },
-    imageUrl: ""
+    imageUrl: '',
   }
 
   options = Object.assign(defaults, options)
@@ -27,28 +28,32 @@ export async function simpleVideoCompose(client: Editframe, options: SimpleVideo
     duration: 7,
     dimensions: {
       width: 800,
-      height: 600
-    }
+      height: 600,
+    },
   })
 
-  /*composition.addText({
-    text: options.text.value,
-    color: options.text.color,
-    fontSize: options.text.size
-  }, {
-    position: options.text.position
-  })
+  composition.addText(
+    {
+      text: options.text.value,
+      color: options.text.color,
+      fontSize: options.text.size,
+    },
+    {
+      position: options.text.position,
+    },
+  )
 
-  composition.addAudio(options.audioUrl)*/
+  composition.addAudio(options.audioUrl)
 
   composition.addImage(options.imageUrl, {
     size: {
-      width: 400, height: 300
+      width: 400,
+      height: 300,
     },
     position: {
-      x: "center",
-      y: "top"
-    }
+      x: 'center',
+      y: 'top',
+    },
   })
 
   const response = await composition.encodeSync()
@@ -59,6 +64,6 @@ export async function simpleVideoCompose(client: Editframe, options: SimpleVideo
 
   return {
     url: response.downloadUrl,
-    id: response.id
+    id: response.id,
   }
 }

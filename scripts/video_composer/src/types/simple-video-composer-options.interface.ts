@@ -1,4 +1,4 @@
-import {TextLayerOptions} from "./text-layer-options.interface";
+import { TextLayerOptions } from './text-layer-options.interface'
 
 export interface SimpleVideoComposerOptions {
   audioUrl: string

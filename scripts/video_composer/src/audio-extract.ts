@@ -1,4 +1,4 @@
-import {spawnSync} from "child_process";
+import { spawnSync } from 'child_process'
 
 export async function audioExtract(filePath: string, outPath: string): Promise<boolean> {
   console.log('Starting audio extraction on file: ', filePath, 'outputing to: ', outPath)
