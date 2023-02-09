@@ -51,6 +51,10 @@ Install dependencies:
 
     yarn install
 
+Build task runner:
+
+    yarn workspace @ef/script_runner build
+
 > Following commands are blocking until Control+C'd. Either run them in the background (via adding & at the end) or execute each of them in a new terminal tab.
 
 Run Redis server:
